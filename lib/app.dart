@@ -6,15 +6,16 @@ import 'screens/screen_1.dart';
 import 'screens/screen_2.dart';
 
 class App extends StatelessWidget {
-  const App({Key key}) : super(key: key);
+   App({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) => WidgetsApp(
         color: ProjectColor.black,
         debugShowCheckedModeBanner: false,
+
         routes: {
           Screen0.routeName: (context) => const Screen0(),
-          Screen1.routeName: (context) => const Screen1(),
+          Screen1.routeName: (context) =>  const Screen1(),
           Screen2.routeName: (context) => const Screen2(),
         },
         pageRouteBuilder: _pageRouteBuilder,

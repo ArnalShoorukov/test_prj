@@ -27,6 +27,6 @@ void _run() => runApp(
             lazy: false,
           ),
         ],
-        child: const App(),
+        child:  App(),
       ),
     );
