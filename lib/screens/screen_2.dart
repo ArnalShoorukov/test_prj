@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
+import 'package:test_prj/providers/base_items_provider.dart';
 import '../providers/horizontal_items.dart';
 import '../providers/vertical_items.dart';
 
@@ -66,7 +67,7 @@ class Screen2 extends StatelessWidget {
     return ListView.builder(
         shrinkWrap: true,
         physics: const ClampingScrollPhysics(),
-        itemCount: 10,
+        itemCount: Provider.of<HorizontalItemsProvider>(context).itemsCount,
         itemBuilder: (context, index) {
           var counter = Provider.of<VerticalItemsProvider>(
             context,
@@ -101,7 +102,7 @@ class Screen2 extends StatelessWidget {
             shrinkWrap: true,
             scrollDirection: Axis.horizontal,
             physics: const ClampingScrollPhysics(),
-            itemCount: 10,
+            itemCount: Provider.of<HorizontalItemsProvider>(context).itemsCount,
             itemBuilder: (context, index) {
               var counter = Provider.of<HorizontalItemsProvider>(
                 context,
